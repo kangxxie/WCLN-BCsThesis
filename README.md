@@ -1,9 +1,9 @@
 # Radar Target Counting System
 
 Real-time radar target counting system using Python/TensorFlow Lite CNN for inference, RabbitMQ messaging for data streaming, and Angular/TypeScript GUI for Range-Doppler and Range-Angle visualization.
-![alt text](images/Homepage.png)
-![alt text](images/Visualization.png)
-![alt text](images/Statistics.png)
+![alt text](Images/Homepage.png)
+![alt text](Images/Visualization.png)
+![alt text](Images/Statistics.png)
 
 ## 🔎 [Read the Full Thesis (PDF)](Thesis.pdf)
 
