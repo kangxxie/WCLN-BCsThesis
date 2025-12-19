@@ -1,0 +1,111 @@
+<div class="statistics-container">
+  <div class="container">
+    <h1>Statistics</h1>
+   
+    <div class="statistics-grid">
+      <div class="statistics-card">
+        <h2>Target detection trend</h2>
+        <div class="line-chart">
+          <div class="chart-container">
+            <div class="y-axis-title">Targets</div>
+            <!-- Y-axis labels -->
+            <div class="y-axis">
+              <span class="y-label">8</span>
+              <span class="y-label">7</span>
+              <span class="y-label">6</span>
+              <span class="y-label">5</span>
+              <span class="y-label">4</span>
+              <span class="y-label">3</span>
+              <span class="y-label">2</span>
+              <span class="y-label">1</span>
+              <span class="y-label">0</span>
+            </div>
+           
+            <!-- Chart area -->
+            <div class="chart-area">
+              <!-- Grid lines -->
+              <div class="grid-lines">
+                <!-- Horizontal grid lines -->
+                <div class="grid-line horizontal" style="bottom: 0%"></div>
+                <div class="grid-line horizontal" style="bottom: 12.5%"></div>
+                <div class="grid-line horizontal" style="bottom: 25%"></div>
+                <div class="grid-line horizontal" style="bottom: 37.5%"></div>
+                <div class="grid-line horizontal" style="bottom: 50%"></div>
+                <div class="grid-line horizontal" style="bottom: 62.5%"></div>
+                <div class="grid-line horizontal" style="bottom: 75%"></div>
+                <div class="grid-line horizontal" style="bottom: 87.5%"></div>
+                <div class="grid-line horizontal" style="bottom: 100%"></div>
+               
+                <!-- Vertical grid lines (24 hours) -->
+                <div class="grid-line vertical" style="left: 0%"></div>
+                <div class="grid-line vertical" style="left: 4.35%"></div>
+                <div class="grid-line vertical" style="left: 8.7%"></div>
+                <div class="grid-line vertical" style="left: 13.04%"></div>
+                <div class="grid-line vertical" style="left: 17.39%"></div>
+                <div class="grid-line vertical" style="left: 21.74%"></div>
+                <div class="grid-line vertical" style="left: 26.09%"></div>
+                <div class="grid-line vertical" style="left: 30.43%"></div>
+                <div class="grid-line vertical" style="left: 34.78%"></div>
+                <div class="grid-line vertical" style="left: 39.13%"></div>
+                <div class="grid-line vertical" style="left: 43.48%"></div>
+                <div class="grid-line vertical" style="left: 47.83%"></div>
+                <div class="grid-line vertical" style="left: 52.17%"></div>
+                <div class="grid-line vertical" style="left: 56.52%"></div>
+                <div class="grid-line vertical" style="left: 60.87%"></div>
+                <div class="grid-line vertical" style="left: 65.22%"></div>
+                <div class="grid-line vertical" style="left: 69.57%"></div>
+                <div class="grid-line vertical" style="left: 73.91%"></div>
+                <div class="grid-line vertical" style="left: 78.26%"></div>
+                <div class="grid-line vertical" style="left: 82.61%"></div>
+                <div class="grid-line vertical" style="left: 86.96%"></div>
+                <div class="grid-line vertical" style="left: 91.3%"></div>
+                <div class="grid-line vertical" style="left: 95.65%"></div>
+                <div class="grid-line vertical" style="left: 100%"></div>
+               
+              </div>
+             
+              <!-- Data line -->
+              <svg class="line-graph" viewBox="0 0 240 100" preserveAspectRatio="none" *ngIf="chartData">
+                <polyline [attr.points]="chartPoints"
+                        fill="none"
+                        stroke="#0a2540"
+                        stroke-width="1"/>
+                <!-- Data points -->
+                <circle *ngFor="let target of chartData.targets; let i = index"
+                       [attr.cx]="(i / (chartData.targets.length - 1)) * 240"
+                       [attr.cy]="100 - (target / 8) * 100"
+                       r="1.5"
+                       fill="#00d4ff"/>
+              </svg>
+            </div>
+          </div>
+         
+          <!-- X-axis labels -->
+          <div class="x-axis" *ngIf="chartData">
+            <span class="x-label" *ngFor="let hour of chartData.hours">{{ hour }}</span>
+          </div>
+          <div class="x-axis-title">Instant</div>
+        </div>
+      </div>
+     
+      <div class="statistics-summary">
+        <div class="summary-card" *ngIf="chartData">
+          <h3>Total detections</h3>
+          <div class="summary-value">{{ chartData.total_detections }}</div>
+        </div>
+       
+        <div class="summary-card" *ngIf="chartData">
+          <h3>Peak</h3>
+          <div class="summary-value">{{ chartData.peak_hour }}:00</div>
+        </div>
+       
+        <div class="summary-card" *ngIf="chartData">
+          <h3>Average</h3>
+          <div class="summary-value">{{ chartData.avg_per_hour }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 

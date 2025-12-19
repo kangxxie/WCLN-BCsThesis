@@ -1,0 +1,4 @@
+.main-content {
+  min-height: calc(100vh - 140px); /* Adjust based on navbar and footer height */
+  padding: var(--spacing-lg) 0;
+}

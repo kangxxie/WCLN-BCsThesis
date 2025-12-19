@@ -1,0 +1,63 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="animated-element hero-title">
+          <span class="letter">W</span>
+          <span class="letter">C</span>
+          <span class="letter">L</span>
+          <span class="letter">N</span>
+        </h1>
+        <h2 class="animated-element delay-1">Wireless Communication and Localization Networks</h2>
+        <p class="hero-description animated-element delay-2">
+          Advanced radar technology for precise target detection and visualization
+        </p>
+        <button class="hero-button animated-element delay-3" routerLink="/visualization">Inizia</button>
+      </div>
+    </div>
+    <div class="geometric-bg">
+      <!-- SVG background elements -->
+      <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1200 600" class="geometric-svg">
+        <circle class="pulse-circle" cx="600" cy="300" r="50" fill="rgba(0, 212, 255, 0.2)"></circle>
+        <circle class="pulse-circle delay-1" cx="600" cy="300" r="100" fill="rgba(0, 212, 255, 0.1)"></circle>
+        <circle class="pulse-circle delay-2" cx="600" cy="300" r="150" fill="rgba(0, 212, 255, 0.05)"></circle>
+        
+        <!-- Radar lines -->
+        <line x1="600" y1="300" x2="900" y2="0" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        <line x1="600" y1="300" x2="1200" y2="300" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        <line x1="600" y1="300" x2="900" y2="600" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        <line x1="600" y1="300" x2="300" y2="600" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        <line x1="600" y1="300" x2="0" y2="300" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        <line x1="600" y1="300" x2="300" y2="0" stroke="rgba(10, 37, 64, 0.2)" stroke-width="2"></line>
+        
+        <!-- Radar sweep animation -->
+        <path class="radar-sweep" d="M 600 300 L 600 0 A 300 300 0 0 1 900 300 Z" fill="rgba(0, 212, 255, 0.1)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3>Range-Doppler Analysis</h3>
+          <p>Advanced analysis of range-doppler data to extract velocity and distance information from radar signals</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Target Counting & Tracking</h3>
+          <p>Real-time counting and tracking of multiple targets with precise position monitoring</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Temporal Target Chart</h3>
+          <p>Graphical representation showing the variation of target count over time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

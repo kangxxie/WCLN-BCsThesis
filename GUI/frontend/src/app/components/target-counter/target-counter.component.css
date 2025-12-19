@@ -1,0 +1,59 @@
+.target-counter-container {
+  padding: var(--spacing-md);
+}
+
+.targets-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.counter-card {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  color: white;
+  text-align: center;
+}
+
+.counter-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.targets-list {
+  flex: 1;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  max-height: 180px;
+}
+
+.target-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.1);
+}
+
+.target-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .targets-visualization {
+    flex-direction: column;
+  }
+  
+  .radar-screen {
+    width: 250px;
+    height: 250px;
+  }
+}

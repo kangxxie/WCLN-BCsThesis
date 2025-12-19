@@ -1,0 +1,37 @@
+
+
+
+<div class="doppler-range-container">
+  <div class="doppler-header">
+    <h3>Range-Angle Map (Live Plot)</h3>
+    <div class="frame-info" *ngIf="heatmapCells.length > 0">
+      <!-- <span>Frame: {{ currentFrameIndex + 1 }}</span> -->
+    </div>
+  </div>
+  
+  <div class="doppler-visualization">
+    <div class="heatmap-container" *ngIf="heatmapCells.length > 0">
+      <div class="heatmap-grid" 
+           [style.grid-template-rows]="'repeat(' + rows + ', 1fr)'"
+           [style.grid-template-columns]="'repeat(' + cols + ', 1fr)'">
+        <div *ngFor="let cell of heatmapCells" 
+             class="heatmap-cell"
+             [style.background-color]="cell.color"
+             [style.grid-row]="cell.row + 1"
+             [style.grid-column]="cell.col + 1"
+             [title]="'Frame: ' + (currentFrameIndex + 1) + ', Row: ' + cell.row + ', Col: ' + cell.col + ', Value: ' + cell.value.toFixed(4)">
+        </div>
+      </div>
+      
+      <!-- Color Bar Legend -->
+      <div class="color-bar">
+        <div class="color-gradient"></div>
+      </div>
+    </div>
+    
+    <!-- Loading state -->
+    <div *ngIf="heatmapCells.length === 0" class="loading-state">
+      <p>Loading Range-Angle data...</p>
+    </div>
+  </div>
+</div>
